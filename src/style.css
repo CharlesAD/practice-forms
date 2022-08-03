@@ -26,3 +26,18 @@ form {
   width: 320px;
   gap: 16px;
 }
+
+button {
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  transition: 0.2s;
+}
+
+button:focus,
+button:hover {
+  background-color: red;
+  cursor: pointer;
+}
