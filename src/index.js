@@ -5,5 +5,10 @@ const form = document.querySelector("form"); // "document" basically is the HTML
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log("Form submitted");
+
+  console.log(event.target.username.value);
+  console.log(event.target.password.value);
+  console.log(event.target.saveUsernameCheckbox.checked);
+  const submission = Object.fromEntries(new FormData(event.target));
+  console.log(submission);
 });
