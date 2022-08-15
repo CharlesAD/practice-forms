@@ -10,5 +10,9 @@ form.addEventListener("submit", (event) => {
   console.log(event.target.password.value);
   console.log(event.target.saveUsernameCheckbox.checked);
   const submission = Object.fromEntries(new FormData(event.target));
-  console.log(submission);
+  console.log(submission); // Turning submitted form into an object
+
+  if (Object.keys(submission).includes("saveUsername")) {
+    localStorage.setItem("username", submission.username);
+  }
 });
